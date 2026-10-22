@@ -4,24 +4,24 @@ A car / person object detection system built on [Ultralytics YOLOv8](https://git
 
 > 中文版请见：[README.md](README.md)
 
-## ✨ Features
+## Features
 
-- 🖼️ **Image detection** — open a single image and show bounding boxes, class, confidence, and object counts in real time
-- 🎥 **Video detection** — run frame-by-frame detection on local videos
-- 📷 **Webcam detection** — real-time detection using your computer's camera
-- 📁 **Batch detection** — detect all images in a folder and aggregate results into a table
-- 📊 **Results table** — shows index, file path, class, confidence, and bounding-box coordinates
-- 💾 **Result export** — save results as image (jpg) or video (avi)
-- 🎯 Detects **person / car** classes, with adjustable confidence and IoU thresholds
+- **Image detection** — open a single image and show bounding boxes, class, confidence, and object counts in real time
+- **Video detection** — run frame-by-frame detection on local videos
+- **Webcam detection** — real-time detection using your computer's camera
+- **Batch detection** — detect all images in a folder and aggregate results into a table
+- **Results table** — shows index, file path, class, confidence, and bounding-box coordinates
+- **Result export** — save results as image (jpg) or video (avi)
+- Detects **person / car** classes, with adjustable confidence and IoU thresholds
 
-## 📸 Demo
+## Demo
 
 <div align="center">
   <img src="assets/demo_both.jpg" width="32%" alt="Cars and persons detected" />
   <img src="assets/demo_persons.jpg" width="32%" alt="Persons detected" />
 </div>
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Requirements
 
@@ -48,14 +48,14 @@ python VideoTest.py    # video detection
 python CameraTest.py   # webcam detection
 ```
 
-## 🖱️ Usage
+## Usage
 
 1. Click the **Image** button to pick a single image, or **Folder** for batch detection;
 2. Choose **Video** or **Webcam** for real-time detection;
 3. View each object's class, confidence, and coordinates in the table on the right;
 4. Click **Save** to export results to the `save_data/` directory.
 
-## 🧠 Model Training
+## Model Training
 
 The model is fine-tuned from YOLOv8n pretrained weights; the training script is `train.py`:
 
@@ -74,7 +74,7 @@ Training configuration (`train.py`):
 
 After training, replace `models/best.pt` with the new weights.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CarPersonDetection/
@@ -97,15 +97,15 @@ CarPersonDetection/
 └── LICENSE               # License (AGPL-3.0)
 ```
 
-## ❓ FAQ
+## FAQ
 
 - **`c10.dll` error on Windows startup**: caused by a DLL loading-order conflict between PyQt5 and torch; already fixed in `MainProgram.py` by importing `ultralytics` before `PyQt5`.
 - **No objects detected**: adjust `conf` (confidence threshold, default 0.25) and `iou` (IoU threshold, default 0.7) in `MainProgram.py`.
 
-## 📄 License
+## License
 
 Built on [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) (AGPL-3.0). This project is released under the **[AGPL-3.0](LICENSE)** license.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) — detection framework and pretrained models

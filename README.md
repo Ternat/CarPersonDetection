@@ -4,24 +4,24 @@
 
 > English version: [README.en.md](README.en.md)
 
-## ✨ 功能特性
+## 功能特性
 
-- 🖼️ **图片检测**：打开单张图片，实时显示检测框、类别、置信度与目标数量
-- 🎥 **视频检测**：对本地视频逐帧检测并实时显示
-- 📷 **摄像头检测**：调用电脑摄像头进行实时检测
-- 📁 **批量检测**：对文件夹内所有图片批量检测，结果汇总到表格
-- 📊 **结果表格**：展示序号、文件路径、类别、置信度、目标框坐标
-- 💾 **结果保存**：将检测结果保存为图片（jpg）或视频（avi）
-- 🎯 支持 **行人 / 汽车** 两类目标，置信度与 IoU 阈值可调
+- **图片检测**：打开单张图片，实时显示检测框、类别、置信度与目标数量
+- **视频检测**：对本地视频逐帧检测并实时显示
+- **摄像头检测**：调用电脑摄像头进行实时检测
+- **批量检测**：对文件夹内所有图片批量检测，结果汇总到表格
+- **结果表格**：展示序号、文件路径、类别、置信度、目标框坐标
+- **结果保存**：将检测结果保存为图片（jpg）或视频（avi）
+- 支持 **行人 / 汽车** 两类目标，置信度与 IoU 阈值可调
 
-## 📸 效果展示
+## 效果展示
 
 <div align="center">
   <img src="assets/demo_both.jpg" width="32%" alt="行人与车辆同时检测" />
   <img src="assets/demo_persons.jpg" width="32%" alt="行人检测" />
 </div>
 
-## 🚀 快速开始
+## 快速开始
 
 ### 环境要求
 
@@ -48,14 +48,14 @@ python VideoTest.py    # 视频检测
 python CameraTest.py   # 摄像头检测
 ```
 
-## 🖱️ 使用说明
+## 使用说明
 
 1. 点击「图片」选择单张图片，或点击「文件夹」批量检测；
 2. 选择「视频」或「摄像头」进行实时检测；
 3. 在界面右侧表格查看每个目标的类别、置信度与坐标；
 4. 点击「保存」将检测结果保存到 `save_data/` 目录。
 
-## 🧠 模型训练
+## 模型训练
 
 本项目模型基于 YOLOv8n 预训练权重微调，训练脚本见 `train.py`：
 
@@ -74,7 +74,7 @@ python train.py
 
 训练完成后，将新权重替换 `models/best.pt` 即可。
 
-## 📁 项目结构
+## 项目结构
 
 ```
 CarPersonDetection/
@@ -97,15 +97,15 @@ CarPersonDetection/
 └── LICENSE               # 许可证（AGPL-3.0）
 ```
 
-## ❓ 常见问题
+## 常见问题
 
 - **Windows 下启动报 `c10.dll` 错误**：这是 PyQt5 与 torch 的 DLL 加载顺序冲突，已在 `MainProgram.py` 中通过「先导入 ultralytics 再导入 PyQt5」解决。
 - **检测不到目标**：可在 `MainProgram.py` 中调整 `conf`（置信度阈值，默认 0.25）与 `iou`（IoU 阈值，默认 0.7）。
 
-## 📄 许可证
+## 许可证
 
 本项目基于 [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)（AGPL-3.0），采用 **[AGPL-3.0](LICENSE)** 许可证发布。
 
-## 🙏 致谢
+## 致谢
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) —— 目标检测框架与预训练模型
