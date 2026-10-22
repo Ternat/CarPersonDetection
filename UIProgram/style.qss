@@ -1,0 +1,71 @@
+/* 主窗口背景色 */
+QMainWindow {
+    background-color: #f0f2f5;
+    font-family: "Microsoft YaHei";
+}
+
+/* QLabel 通用样式 */
+QLabel {
+    color: #333;
+    font-size: 14px;
+}
+
+/* QPushButton 美化 */
+QPushButton {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+QPushButton:hover {
+    background-color: #45a049;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}
+
+/* QLineEdit 输入框美化 */
+QLineEdit {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 4px 8px;
+    background-color: white;
+}
+
+/* QTableWidget 表格美化 */
+QHeaderView::section {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    padding: 4px;
+    border: none;
+}
+QTableWidget {
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    gridline-color: #eee;
+    selection-background-color: #c8e6c9;
+}
+QTableWidget QTableCornerButton::section {
+    background-color: #4caf50;
+}
+
+/* QComboBox 下拉框 */
+QComboBox {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 2px 8px;
+    background-color: white;
+}
+
+/* QProgressBar 进度条 */
+QProgressBar {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background: #f5f5f5;
+}
+QProgressBar::chunk {
+    background-color: #4caf50;
+    width: 20px;
+}

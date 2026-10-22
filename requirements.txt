@@ -1,0 +1,7 @@
+# 核心依赖；ultralytics 会自动安装 torch / torchvision 等
+# Core dependencies; ultralytics installs torch/torchvision automatically
+ultralytics>=8.0.0
+PyQt5>=5.15.9
+opencv-python>=4.8.0
+Pillow>=10.0.0
+numpy>=1.24.0
